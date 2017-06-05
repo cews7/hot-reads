@@ -6,7 +6,7 @@ RSpec.describe "links API", type: :request do
       create_list(:link, 15)
 
       get '/api/v1/hot_links'
-
+      
       expect(response).to be_success
 
       links = JSON.parse(response.body)
