@@ -2,7 +2,7 @@ class CreateLinks < ActiveRecord::Migration[5.0]
   def change
     create_table :links do |t|
       t.string :url
-      t.string :read_total
+      t.integer :read_total, default: 1
 
       t.timestamps
     end
