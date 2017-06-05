@@ -6,7 +6,7 @@ describe 'as a guest on root page' do
 
     visit root_path
 
-    Link.most_hot.each do |link|
+    Link.hot.each do |link|
       expect(page).to have_content "#{link.url}"
     end
   end
