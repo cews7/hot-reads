@@ -1,13 +1,15 @@
 class Api::V1::LinksController < ApplicationController
   skip_before_action :verify_authenticity_token
-  
+
   def create
     @link = Link.find_or_initialize_by(link_params)
     if @link.id
       link.update(read_total: link.read_total + 1)
-      render json: link, status: 201
+      render json: @link, status: 201
+    elsif @link.save
+      render json: @link, status: 201
     else
-      render json: link.errors.full_messages, status: 400
+      render json: @link.errors.full_messages, status: 400
     end
   end
 
