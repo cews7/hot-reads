@@ -1,24 +1,17 @@
-# README
+# Hot-Reads
+This is a sister app to URL-Lockbox. It reports out the top ten links in all Lock-boxes for all users. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+1. ```git clone git@github.com:cews7/hot-reads.git```
+2. ```bundle```
+3. ```rspec``` (4/4)
 
-* Ruby version
+## Run Application
+1. to run locally ```rails s``` -> ```localhost:3030```
+2. to run production  ```https://whispering-brushlands-58561.herokuapp.com/```
 
-* System dependencies
+## API
+GET ```https://whispering-brushlands-58561.herokuapp.com/api/v1/hot_links```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+POST  ```https://whispering-brushlands-58561.herokuapp.com/api/v1/links```
