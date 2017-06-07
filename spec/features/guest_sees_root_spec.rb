@@ -5,7 +5,7 @@ describe 'as a guest on root page' do
     create_list(:link, 10)
 
     visit root_path
-
+    save_and_open_page 
     Link.hot.each do |link|
       expect(page).to have_content "#{link.url}"
     end
